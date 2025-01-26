@@ -17,9 +17,9 @@ const fetchData = () => {
 
         // Check if the iteration is over
         // Run amimation if so
-        if ( dataArr.length === dataArr.indexOf(customData) + 1 ) {
+        if (dataArr.length === dataArr.indexOf(customData) + 1) {
           animationTimeline();
-        } 
+        }
       });
     });
 };
@@ -172,6 +172,8 @@ const animationTimeline = () => {
       },
       "+=2"
     )
+    .from(".idea-7", 0.7, ideaTextTrans)
+    .to(".idea-7", 0.7, ideaTextTransLeave, "+=1.5")
     .staggerFrom(
       ".idea-6 span",
       0.8,
@@ -195,6 +197,8 @@ const animationTimeline = () => {
       0.2,
       "+=1"
     )
+    .from(".idea-8", 1.7, ideaTextTrans)
+    .to(".idea-8", 1.7, ideaTextTransLeave, "+=1.5")
     .staggerFromTo(
       ".baloons img",
       2.5,
@@ -220,12 +224,12 @@ const animationTimeline = () => {
       },
       "-=2"
     )
-    .from(".hat", 0.5, {
-      x: -100,
-      y: 350,
-      rotation: -180,
-      opacity: 0
-    })
+    // .from(".hat", 0.5, {
+    //   x: -100,
+    //   y: 350,
+    //   rotation: -180,
+    //   opacity: 0
+    // })
     .staggerFrom(
       ".wish-hbd span",
       0.7,
